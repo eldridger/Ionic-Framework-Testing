@@ -1,0 +1,48 @@
+<div class="modal">
+    <header class="bar bar-header bar-royal">
+        <h1 class="title"> Select Menus! </h1>
+        <div class="button button-clear" ng-click="selectModal.hide()"><span class="icon ion-close"></span>
+        </div>
+    </header>
+    <ion-content class="has-header padding">
+        <ion-list>
+            <div class="item item-divider">
+                Ionic Select Menu
+            </div>
+
+            <label class="item item-input item-select">
+                <div class="input-label">
+                    Lightsaber
+                </div>
+                <select>
+                    <option>Blue</option>
+                    <option selected>Green</option>
+                    <option>Red</option>
+                </select>
+            </label>
+            <br />
+
+
+            <div class="item item-divider">
+                Custom Accordion Select Menu
+            </div>
+            <accordion>
+				<accordion-group heading="Color" text="{{model.color}}">
+					<ion-radio ng-model="$parent.model.color" ng-value="'Red'">Red</ion-radio>
+					<ion-radio ng-model="$parent.model.color" ng-value="'Blue'">Blue</ion-radio>
+					<ion-radio ng-model="$parent.model.color" ng-value="'Green'">Green</ion-radio>
+				</accordion-group>
+
+				<accordion-group heading="Favorite Food" text="{{model.food}}">
+					<ion-radio ng-model="$parent.model.food" ng-value="'Tacos'">Tacos</ion-radio>
+					<ion-radio ng-model="$parent.model.food" ng-value="'Pasta'">Pasta</ion-radio>
+					<ion-radio ng-model="$parent.model.food" ng-value="'Cake'">Cake</ion-radio>
+				</accordion-group>
+            </accordion>
+
+        </ion-list>
+        <button class="button button-block button-royal" ng-click="selectModal.hide()">
+            K
+        </button>
+    </ion-content>
+</div>

@@ -1,0 +1,42 @@
+
+
+
+<!-- Side Menu
+    Abstract state (meaning it contains other views and cannot be navigated too directly)
+    "menuContent" view is a container for other view defined in app.js
+-->
+<ion-side-menus>
+    <ion-pane ion-side-menu-content>
+        <ion-nav-bar class="bar-dark nav-title-slide-ios7">
+            <div class="buttons">
+
+                <!-- Back button if we need it
+                <ion-nav-back-button class="button-clear">
+                    <i class="ion-arrow-left-c"></i> Back
+                </ion-nav-back-button>
+                -->
+                <button class="button icon button-clear ion-navicon-round" ng-click="toggleLeft()"></button>
+            </div>
+        </ion-nav-bar>
+
+        <div ui-view="subheader"></div>
+
+        <ion-nav-view name="menuContent" animation="slide-left-right"></ion-nav-view>
+    </ion-pane>
+
+    <ion-side-menu side="left">
+        <header class="bar bar-header bar-stable">
+            <h1 class="title">Profile</h1>
+        </header>
+        <ion-content class="has-header">
+            <ion-list>
+                <ion-item nav-clear menu-close ui-sref="app.home">
+                    Home
+                </ion-item>
+                <ion-item nav-clear menu-close ui-sref="forms.selectionsList">
+                    Form Stuff
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,14 @@
+<ion-view title="Home">
+	<ion-content class="has-subheader">
+		<ion-refresher
+			pulling-text="Pull to refresh..."
+			on-refresh="doRefresh()">
+		</ion-refresher>
+		<ion-list>
+			<!-- Note: track by $index causes the for loop to use array index instead of key name allowing duplicate keys -->
+			<ion-item ng-repeat="item in items track by $index">
+			<p>{{ item }}</p>
+		</ion-list>
+		<ion-infinite-scroll on-infinite="addItems()"></ion-infinite-scroll>
+	</ion-content>
+</ion-view>

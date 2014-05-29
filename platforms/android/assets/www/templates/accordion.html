@@ -1,0 +1,17 @@
+<div>
+	<ion-item class="item-stable" ng-click="toggle()" ng-class="{active: isActive()}">
+		<div>
+			<div class="align-left">
+				<i class="icon" ng-class="isActive() ? 'ion-minus' : 'ion-plus'"></i>
+				 &nbsp;
+				{{ heading }}
+			</div>
+			<div class="align-right">
+				{{text}}
+			</div>
+		</div>
+	</ion-item>
+
+	<div class="card" ng-show="isActive()" ng-transclude>
+	</div>
+</div>

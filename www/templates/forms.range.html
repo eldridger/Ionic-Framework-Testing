@@ -1,0 +1,42 @@
+<div class="modal">
+	<header class="bar bar-header bar-royal">
+		<h1 class="title"> Ranges! </h1>
+		<div class="button button-clear" ng-click="rangeModal.hide()"><span class="icon ion-close"></span></div>
+	</header>
+
+	<ion-content class="has-header padding">
+		<div class="range">
+			<i class="icon ion-volume-low"></i>
+			<input type="range" name="volume" ng-model="volume">
+			<i class="icon ion-volume-high"></i>
+		</div>
+		<h3 class="text-center"> {{ volume }} </h3>
+
+		<ion-list>
+			<div class = "item item-divider">
+				Divider
+			</div>
+			<div class="item">
+				<div class="range range-royal">
+					<i class="icon ion-ios7-sunny-outline"></i>
+					<input type="range" name="brightness" ng-model="brightness" min="0" max="20" value="10">
+					<i class="icon ion-ios7-sunny"></i>
+				</div>
+				<h3 class="text-center"> {{ brightness }} </h3>
+			</div>
+
+
+			<div class="item">
+				<div class="range range-assertive">
+					<i class="icon ion-icecream"></i>
+					<input type="range" name="iceCream" ng-model="iceCream" min="0" max="100" value="10">
+					<i class="icon ion-pizza"></i>
+				</div>
+				<h3 class="text-center"> {{ iceCream }} </h3>
+			</div>
+		</ion-list>
+		<button class="button button-block button-royal" ng-click="rangeModal.hide()">
+			K
+		</button>
+	</ion-content>
+</div>

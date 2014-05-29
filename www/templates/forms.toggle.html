@@ -1,0 +1,24 @@
+
+<div class="modal">
+	<header class="bar bar-header bar-royal">
+		<h1 class="title"> Toggles! </h1>
+		<div class="button button-clear" ng-click="toggleModal.hide()"><span class="icon ion-close"></span></div>
+	</header>
+	<ion-content class="has-header padding">
+		<ion-list>
+			<ion-item class="item item-toggle" ng-repeat="mitem in modalItems">
+			
+				<p>{{ mitem }}</p>
+				
+				<label class="toggle toggle-royal">
+					<input type="checkbox">
+					<div class="track">
+						<div class="handle"></div>
+					</div>
+				</label>
+		</ion-list>
+		<button class="button button-block button-royal" ng-click="toggleModal.hide()">
+			K
+		</button>
+	</ion-content>
+</div>

@@ -1,0 +1,9 @@
+<ion-view title="Home">
+	<ion-content class="has-subheader">
+		<ion-list>
+			<!-- Note: track by $index causes the for loop to use array index instead of key name allowing duplicate keys -->
+			<ion-item ng-repeat="item in items track by $index" ng-click="item.click()">
+				<p>{{ item.name }}</p>
+		</ion-list>
+	</ion-content>
+</ion-view>

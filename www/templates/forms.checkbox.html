@@ -1,0 +1,20 @@
+
+<div class="modal">
+	<header class="bar bar-header bar-royal">
+		<h1 class="title"> Checkboxes! </h1>
+		<div class="button button-clear" ng-click="checkboxModal.hide()"><span class="icon ion-close"></span></div>
+	</header>
+	<ion-content class="has-header padding">
+		<ion-list>
+			<ion-item class="item item-checkbox" ng-repeat="mitem in modalItems">
+			
+				<label class="checkbox checkbox-royal">
+					<input type="checkbox">
+				</label>
+				<p>{{ mitem }}</p>
+		</ion-list>
+		<button class="button button-block button-royal" ng-click="checkboxModal.hide()">
+			K
+		</button>
+	</ion-content>
+</div>

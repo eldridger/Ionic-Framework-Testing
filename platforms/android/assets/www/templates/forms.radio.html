@@ -1,0 +1,23 @@
+
+<div class="modal">
+	<header class="bar bar-header bar-royal">
+		<h1 class="title"> Radio Buttons </h1>
+		<div class="button button-clear" ng-click="radioModal.hide()"><span class="icon ion-close"></span></div>
+	</header>
+
+	<ion-content class="has-header padding">
+		<ion-list>
+			<ion-item class = "item item-radio" ng-repeat="item in modalItems">
+			<label>
+				<input type="radio" name="group">
+				<div class="item-content">
+					<p>{{ item }}</p>
+				</div>
+				<i class="radio-icon ion-checkmark"></i>
+			</label>
+		</ion-list>
+		<button class="button button-block button-royal" ng-click="radioModal.hide()">
+			K
+		</button>
+	</ion-content>
+</div>
